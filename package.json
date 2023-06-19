@@ -5,6 +5,7 @@
   "author": "Emmanuel Nieves Email: emmanuelnieves@snhu.edu",
   "private": true,
   "scripts": {
+    "dev": "nodemon app.js",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -19,5 +20,8 @@
     "nodemon": "^2.0.22",
     "request": "^2.88.2",
     "seedgoose": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

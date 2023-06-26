@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { TripDataService } from '../services/trip-data.service';
 
@@ -47,17 +47,17 @@ export class EditTripComponent implements OnInit {
         console.log(data);
         // Don't use editForm.setValue() as it will throw console error
         this.editForm.patchValue(data[0]);
-      })
+    })
   }
 
-  onSubmit() {
+   onSubmit() {
     this.submitted = true;
     if (this.editForm.valid) {
       this.tripService.updateTrip(this.editForm.value)
         .then(data => {
           console.log(data);
           this.router.navigate(['']);
-        });
+      });
     }
   }
 }
